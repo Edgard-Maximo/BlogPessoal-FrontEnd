@@ -30,12 +30,12 @@ export class AuthService {
   }
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>('https://blogdoedd.herokuapp.com/usuarios/${id}', )
+    return this.http.get<User>('https://blogdoedd.herokuapp.com/usuarios/${id}')
   }
 
 
-  putUsuario(user: User): Observable<User>{
-    return this.http.put<User>('https://blogdoedd.herokuapp.com/usuarios/alterar', user)
+  putUsuario(usuario: User): Observable<User>{
+    return this.http.put<User>(`https://blogdoedd.herokuapp.com/usuarios/alterar`, usuario)
   }
 
 

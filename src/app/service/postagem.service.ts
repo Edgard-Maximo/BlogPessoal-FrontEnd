@@ -15,7 +15,7 @@ export class PostagemService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
     getAllPostagens(): Observable<Postagem[]>{
-      return this.http.get<Postagem[]>('https://blogdoedd.herokuapp.com/postagens', )
+      return this.http.get<Postagem[]>('https://blogdoedd.herokuapp.com/postagens' )
     }
   
 

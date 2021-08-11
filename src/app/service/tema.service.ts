@@ -19,8 +19,8 @@ export class TemaService {
     return this.http.get<Tema[]>('https://blogdoedd.herokuapp.com/tema')
   }
 
-  getByIdTema(id: number):Observable<Tema>{
-    return this.http.get<Tema>('https://blogdoedd.herokuapp.com/tema/${id}')
+  getByIdTema(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`https://blogdoedd.herokuapp.com/tema/${id}`)
 
   }
 
@@ -30,10 +30,10 @@ export class TemaService {
 
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://blogdoedd.herokuapp.com/tema', tema)
+    return this.http.put<Tema>('https://blogdoedd.herokuapp.com/tema,', tema)
   }
 
   deleteTema(id: number){
-    return this.http.delete('https://blogdoedd.herokuapp.com/tema/${id}')
+    return this.http.delete(`https://blogdoedd.herokuapp.com/tema/${id}`)
 }
 }
